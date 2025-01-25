@@ -55,7 +55,7 @@ API_KEY = 'app-esamNSyt3DcelD4o6yM9uH4U'  # 取得したAPIキーに置き換え
 
 # Dify APIのベースURL
 # BASE_URL = 'https://api.dify.ai/v1/completion-messages'
-BASE_URL = 'https://api.dify.ai/v1/workflows/run'
+BASE_URL = 'https://api.dify.ai/v1/workflows/run/:96b58038-4f56-41e8-9dc5-b18c78fbe34b'
 
 def get_dify_response(query: str) -> str:
     """
