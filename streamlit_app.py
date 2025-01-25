@@ -1,5 +1,6 @@
 
 import streamlit as st
+from streamlit_drawable_canvas import st_canvas
 import streamlit.components.v1 as stc
 
 st.title("Embedding Dify app in Streamlit")
