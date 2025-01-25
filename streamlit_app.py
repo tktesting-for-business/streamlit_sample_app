@@ -7,9 +7,10 @@ from PIL import Image
 
 # Streamlit app タイトル
 st.title("Drawable Canvas Demo")
-img=Image.open('aaa.jpg')
-#st.image(img)
-st.image(img, width=100)
+img = Image.open('aaa.jpg')
+
+# use_column_width 実際のレイアウトの横幅に合わせるか
+st.image(img, caption='Super Mario', use_column_width=True)
 
 # キャンバスの設定
 canvas_result = st_canvas(
