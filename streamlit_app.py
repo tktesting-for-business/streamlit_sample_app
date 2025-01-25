@@ -8,8 +8,7 @@ from PIL import Image
 # Streamlit app タイトル
 st.title("Drawable Canvas Demo")
 img = Image.open('aaa.jpg')
-# st.image(img)
-st.write("Hello, world")
+
 
 # キャンバスの設定
 canvas_result = st_canvas(
@@ -44,6 +43,11 @@ html_code = """
 """
 # HTMLをStreamlitアプリに埋め込む
 stc.html(html_code, height=800)
+
+# st.image(img)
+st.write("Hello, world")
+
+
 # Case 2の場合
 st.write("## Case 2.")
 # HTMLとJavaScriptを埋め込む
