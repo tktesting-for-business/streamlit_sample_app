@@ -72,11 +72,11 @@ def get_dify_response(query: str) -> str:
     data: Dict[str, any] = {
         "inputs": {},
         "inTest": query,
-        "response_mode": "streaming",
+        "response_mode": "blocking",
         "user": "taka3chijp@gmail.com"
     }
     
-    response = requests.post(BASE_URL, headers=headers, json=data)
+    response = requests.post(BASE_URL, headers=headers, json=payload)
     response.raise_for_status()
     
     return response.json()['answer']
