@@ -51,17 +51,16 @@ st.image(img)
 
 # Test Case
 st.write("## Case 1.5")
-API_KEY = 'app-PAjUWrL1Q78oR37I6lsguUP0'  # 取得したAPIキーに置き換えてください
+API_KEY = 'app-esamNSyt3DcelD4o6yM9uH4U'  # 取得したAPIキーに置き換えてください
 # Dify APIのベースURL
 # BASE_URL = 'https://api.dify.ai/v1/chat-messages'
-BASE_URL = 'https://udify.app/workflow/5UZlCToNkzjM8F5J'
+BASE_URL = 'https://api.dify.ai/v1/workflows/run'
 
 def get_dify_response(query: str) -> str:
     """
     Dify APIにリクエストを送信し、応答を取得する関数
 
     :param query: ユーザーの質問
-    :param user: ユーザー識別子
     :return: APIからの応答テキスト
     """
     headers = {
@@ -72,8 +71,8 @@ def get_dify_response(query: str) -> str:
     data: Dict[str, any] = {
         "inputs": {},
         "query": query,
-        "response_mode": "blocking",
-
+        "response_mode": "streaming",
+        "user": "abc-123"
     }
     
     response = requests.post(BASE_URL, headers=headers, json=data)
