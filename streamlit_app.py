@@ -15,7 +15,7 @@ canvas_result = st_canvas(
     fill_color="rgba(255, 165, 0, 0.3)",  # 塗りつぶしの色
     stroke_width=2,  # 線の太さ
     stroke_color="#000000",  # 線の色
-    #background_color="#FFF",  # 背景色
+    background_color="#FFF",  # 背景色
     #background_image=None,  # 背景画像（なし）
     background_image=img,  # 背景画像
     update_streamlit=True,  # Streamlitをリアルタイムで更新
@@ -44,7 +44,8 @@ html_code = """
 # HTMLをStreamlitアプリに埋め込む
 stc.html(html_code, height=800)
 
-st.image('aaa.jpg')
+#st.image('aaa.jpg')
+st.image=img
 
 # Case 2の場合
 st.write("## Case 2.")
