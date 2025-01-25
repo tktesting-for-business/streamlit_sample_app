@@ -54,8 +54,7 @@ st.write("## Case 1.5")
 API_KEY = 'app-esamNSyt3DcelD4o6yM9uH4U'  # 取得したAPIキーに置き換えてください
 
 # Dify APIのベースURL
-# BASE_URL = 'https://api.dify.ai/v1/completion-messages'
-BASE_URL = 'https://api.dify.ai/v1/workflows/run/:19e70a32-6e75-40f7-aff8-0732ac758c0c'
+BASE_URL = 'https://api.dify.ai/v1/workflows/run'
 
 def get_dify_response(query: str) -> str:
     """
@@ -71,18 +70,18 @@ def get_dify_response(query: str) -> str:
     
     data = {
         "inputs": {"inTest": query},
-        "response_mode": "streaming"
-        # "user": "taka3chijp@gmail.com"
+        "response_mode": "blocking",
+        "user": "taka3chijp@gmail.com"
     }
     
     response = requests.post(BASE_URL, headers=headers, json=data)
     response.raise_for_status()
     
-    return response.json()['output']
-    # return response.text
+    # return response.json()['output']
+    return response.text
 
 if __name__ == "__main__":
-    query = "大阪の名所は"
+    query = "aaaaa"
     
     try:
         answer = get_dify_response(query)
