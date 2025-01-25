@@ -9,7 +9,7 @@ from PIL import Image
 st.title("Drawable Canvas Demo")
 img=Image.open('aaa.jpg')
 #st.image(img)
-st.image(img, caption='サンプル',use_column_width=True)
+st.image(img, width=100)
 
 # キャンバスの設定
 canvas_result = st_canvas(
