@@ -76,16 +76,21 @@ def get_dify_response(query: str) -> str:
     
     response = requests.post(BASE_URL, headers=headers, json=data)
     response.raise_for_status()
-    #retData = response.json()
-    #return retData['data']['outputs']['output']
+
     return response.json()['data']['outputs']['output']
 
 
 if __name__ == "__main__":
-    query = "aaaaa"
-    
+    # query = "aaaaa"
+    # テキストボックス
+    query = st.text_input("テキストを入力してください")
+
     try:
-        answer = get_dify_response(query)
+        # ボタン
+        if st.button("APIを呼び出す"):
+            answer = get_dify_response(query)
+            #answer = get_dify_response(query)
+        
         st.write(answer)
     except requests.RequestException as e:
         st.write(f"エラーが発生しました: {e}")
