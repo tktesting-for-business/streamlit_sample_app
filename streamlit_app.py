@@ -86,9 +86,9 @@ if __name__ == "__main__":
     
     try:
         answer = get_dify_response(query)
-        print(answer)
+        st.write(answer)
     except requests.RequestException as e:
-        print(f"エラーが発生しました: {e}")
+        st.write(f"エラーが発生しました: {e}")
 
 
 # Case 2の場合
