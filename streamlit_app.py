@@ -16,9 +16,7 @@ canvas_result = st_canvas(
     background_color="#FFF",  # 背景色
     background_image=None,  # 背景画像（なし）
     #bg_image = st.sidebar.file_uploader("Background image:", type=["png", "jpg"])
-    img = Image.open("aaa.jpg")
-    #background_image="aaa.jpg",  # 背景画像
-    
+    background_image=Image.open("aaa.jpg"),  # 背景画像
     update_streamlit=True,  # Streamlitをリアルタイムで更新
     height=150,  # キャンバスの高さ
     drawing_mode="rect",  # 描画モード（矩形）
