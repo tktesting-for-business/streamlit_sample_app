@@ -12,7 +12,9 @@ canvas_result = st_canvas(
     stroke_width=2,  # 線の太さ
     stroke_color="#000000",  # 線の色
     background_color="#FFF",  # 背景色
-    background_image=None,  # 背景画像（なし）
+    #background_image=None,  # 背景画像（なし）
+    background_image="aaa.jpg",  # 背景画像
+    
     update_streamlit=True,  # Streamlitをリアルタイムで更新
     height=150,  # キャンバスの高さ
     drawing_mode="rect",  # 描画モード（矩形）
