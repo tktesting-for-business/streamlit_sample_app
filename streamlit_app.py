@@ -16,7 +16,7 @@ canvas_result = st_canvas(
     background_color="#FFF",  # 背景色
     background_image=None,  # 背景画像（なし）
     #bg_image = st.sidebar.file_uploader("Background image:", type=["png", "jpg"])
-    #img = Image.open('saaa.jpg')
+    img = Image.open('saaa.jpg')
     #background_image="aaa.jpg",  # 背景画像
     
     update_streamlit=True,  # Streamlitをリアルタイムで更新
