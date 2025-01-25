@@ -79,7 +79,7 @@ def get_dify_response(query: str) -> str:
 
     retData = response.json()
     if 'outputs' in retData and 'output' in retData['outputs']:
-        return retData['output']
+        return retData['outputs']
     else:
         return "警告：'outputs' または 'output' キーが見つかりませんでした。"
 
