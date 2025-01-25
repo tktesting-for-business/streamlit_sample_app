@@ -54,8 +54,8 @@ st.write("## Case 1.5")
 API_KEY = 'app-esamNSyt3DcelD4o6yM9uH4U'  # 取得したAPIキーに置き換えてください
 
 # Dify APIのベースURL
-# BASE_URL = 'https://api.dify.ai/v1/'
-BASE_URL = 'https://api.dify.ai/v1/workflows/run'
+BASE_URL = 'https://api.dify.ai/v1/completion-messages'
+# BASE_URL = 'https://api.dify.ai/v1/workflows/run'
 
 def get_dify_response(query: str) -> str:
     """
@@ -82,7 +82,7 @@ def get_dify_response(query: str) -> str:
     # return response.text
 
 if __name__ == "__main__":
-    query = "大阪"
+    query = "大阪の名所は"
     
     try:
         answer = get_dify_response(query)
