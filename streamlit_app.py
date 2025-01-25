@@ -6,11 +6,7 @@ x = 10
 <html>
 <head>
 <title>Red Rectangle</title>
-<style>
-  canvas {
-    border: 3px solid pink;
-  }
-</style>
+
 </head>
 <body>
 <script>
