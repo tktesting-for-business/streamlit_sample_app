@@ -8,7 +8,8 @@ from PIL import Image
 # Streamlit app タイトル
 st.title("Drawable Canvas Demo")
 
-#img=Image.open("aaa.jpg")
+img = Image.open('aaa.png')
+st.image(img, caption='サンプル',use_column_width=True)
 
 # キャンバスの設定
 canvas_result = st_canvas(
@@ -43,8 +44,6 @@ html_code = """
 """
 # HTMLをStreamlitアプリに埋め込む
 stc.html(html_code, height=800)
-
-st.image("aaa.jpg")
 
 # Case 2の場合
 st.write("## Case 2.")
