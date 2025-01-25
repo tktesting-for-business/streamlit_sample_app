@@ -21,7 +21,7 @@ stc.html(html_code, height=800)
 st.write("## Case 2.")
 # HTMLとJavaScriptを埋め込む
 html_code = """
-<img id="myImage" src="./aaa.jpg" alt="Target Image" style="display: none;">
+<img id="myImage" src="aaa.jpg" alt="Target Image" style="display: none;">
 <canvas id="myCanvas"></canvas>
 <script>
   const img = document.getElementById('myImage');
@@ -35,10 +35,6 @@ html_code = """
     ctx.drawImage(img, 0, 0);
 
     // テキストの位置とサイズ (手動で指定)
-    // const x = 255;
-    // const y = 7;
-    // const w = 130;
-    //  const h = 30;
     const x = 123;
     const y = 135;
     const w = 98;
