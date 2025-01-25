@@ -76,10 +76,17 @@ def get_dify_response(query: str) -> str:
     
     response = requests.post(BASE_URL, headers=headers, json=data)
     response.raise_for_status()
-    
-    # return response.json()['output']
+
+    retData = response.json()
+    if 'outputs' in retData and 'output' in retData['outputs']:
+        return retData['outputs']['output']
+    else:
+        st.write("警告：'outputs' または 'output' キーが見つかりませんでした。")
+
+return None # キーが存在しない場合の処理
+
     # return response.json()['task_id']
-    return response.text
+    # return response.text
 
 if __name__ == "__main__":
     query = "aaaaa"
