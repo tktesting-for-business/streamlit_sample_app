@@ -78,8 +78,8 @@ def get_dify_response(query: str) -> str:
     response.raise_for_status()
     
     # return response.json()['output']
-    # return response.json()['output']
-    return response.text
+    return response.json()['task_id']
+    # return response.text
 
 if __name__ == "__main__":
     query = "aaaaa"
