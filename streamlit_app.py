@@ -44,7 +44,7 @@ html_code = """
 # HTMLをStreamlitアプリに埋め込む
 stc.html(html_code, height=800)
 
-# st.image(img)
+st.image(img)
 st.write("Hello, world")
 
 
