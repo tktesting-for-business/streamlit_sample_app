@@ -83,7 +83,7 @@ def get_dify_response(query: str) -> str:
 
 if __name__ == "__main__":
     query = "大阪"
-    
+    st.write(data.inputs.inTest)
     try:
         answer = get_dify_response(query)
         st.write(answer)
