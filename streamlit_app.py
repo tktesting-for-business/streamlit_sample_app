@@ -70,7 +70,7 @@ def get_dify_response(query: str) -> str:
     
     data: Dict[str, any] = {
         "inputs": {},
-        "input": query,
+        "intest": query,
         "response_mode": "streaming",
         "user": "taka3chijp@gmail.com"
     }
