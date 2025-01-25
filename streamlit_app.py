@@ -50,7 +50,7 @@ stc.html(html_code, height=800)
 st.image(img)
 
 # Test Case
-st.write("## Case 1.5")
+st.write("## Case 天気予報")
 API_KEY = 'app-esamNSyt3DcelD4o6yM9uH4U'  # 取得したAPIキーに置き換えてください
 
 # Dify APIのベースURL
@@ -83,11 +83,11 @@ def get_dify_response(query: str) -> str:
 if __name__ == "__main__":
     # query = "aaaaa"
     # テキストボックス
-    query = st.text_input("テキストを入力してください")
+    query = st.text_input("天気を知りたい場所を入力してください")
 
     try:
         # ボタン
-        if st.button("APIを呼び出す"):
+        if st.button("Dify APIを呼び出す"):
             answer = get_dify_response(query)
             #answer = get_dify_response(query)
         
