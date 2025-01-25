@@ -75,7 +75,7 @@ def get_dify_response(query: str) -> str:
         # "user": "taka3chijp@gmail.com"
     }
     
-    response = requests.post(BASE_URL, headers=headers, data=json.dumps(data))
+    response = requests.post(BASE_URL, headers=headers, json=data)
     response.raise_for_status()
     
     # return response.json()['output']
