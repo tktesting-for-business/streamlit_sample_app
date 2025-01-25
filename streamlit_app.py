@@ -1,6 +1,3 @@
- x = 10
- 'x: ', x 
-
 import streamlit as st
 import streamlit.components.v1 as stc
 
