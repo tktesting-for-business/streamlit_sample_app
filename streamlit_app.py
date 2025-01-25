@@ -77,15 +77,8 @@ def get_dify_response(query: str) -> str:
     response = requests.post(BASE_URL, headers=headers, json=data)
     response.raise_for_status()
 
-    retData = response.json()
-    if 'outputs' in retData and 'output' in retData['outputs']:
-        return retData['outputs']['output']
-    else:
-        # return "警告：'outputs' または 'output' キーが見つかりませんでした。"
-        return retData['data']['outputs']['output']
+return response.json()['data']['outputs']['output']
         
-    # return response.json()['task_id']
-    # return response.text
 
 if __name__ == "__main__":
     query = "aaaaa"
