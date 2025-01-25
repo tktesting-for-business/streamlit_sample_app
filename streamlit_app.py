@@ -2,7 +2,27 @@
 import streamlit as st
 import streamlit.components.v1 as stc
 from streamlit_drawable_canvas import st_canvas
-# from streamlit_cropper import st_cropper
+
+# Streamlit app タイトル
+st.title("Drawable Canvas Demo")
+
+# キャンバスの設定
+canvas_result = st_canvas(
+    fill_color="rgba(255, 165, 0, 0.3)",  # 塗りつぶしの色
+    stroke_width=2,  # 線の太さ
+    stroke_color="#000000",  # 線の色
+    background_color="#FFF",  # 背景色
+    background_image=None,  # 背景画像（なし）
+    update_streamlit=True,  # Streamlitをリアルタイムで更新
+    height=150,  # キャンバスの高さ
+    drawing_mode="rect",  # 描画モード（矩形）
+    key="canvas",  # キャンバスのキー
+)
+
+# 描画結果の表示
+if canvas_result.json_data is not None:
+    st.json(canvas_result.json_data)
+
 
 st.title("Embedding Dify app in Streamlit")
 # Case 1の場合
