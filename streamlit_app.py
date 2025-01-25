@@ -54,7 +54,7 @@ st.write("## Case 1.5")
 API_KEY = 'app-PAjUWrL1Q78oR37I6lsguUP0'  # 取得したAPIキーに置き換えてください
 # Dify APIのベースURL
 # BASE_URL = 'https://api.dify.ai/v1/chat-messages'
-BASE_URL = 'https://api.dify.ai/v1/getTenki'
+BASE_URL = 'https://api.dify.ai/v1/workflows/run'
 
 def get_dify_response(query: str) -> str:
     """
