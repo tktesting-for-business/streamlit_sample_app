@@ -2,6 +2,8 @@
 import streamlit as st
 import streamlit.components.v1 as stc
 from streamlit_drawable_canvas import st_canvas
+#　モジュールの読み込み
+from PIL import Image
 
 # Streamlit app タイトル
 st.title("Drawable Canvas Demo")
@@ -12,8 +14,10 @@ canvas_result = st_canvas(
     stroke_width=2,  # 線の太さ
     stroke_color="#000000",  # 線の色
     background_color="#FFF",  # 背景色
-    #background_image=None,  # 背景画像（なし）
-    background_image="aaa.jpg",  # 背景画像
+    background_image=None,  # 背景画像（なし）
+    #bg_image = st.sidebar.file_uploader("Background image:", type=["png", "jpg"])
+    #img = Image.open('saaa.jpg')
+    #background_image="aaa.jpg",  # 背景画像
     
     update_streamlit=True,  # Streamlitをリアルタイムで更新
     height=150,  # キャンバスの高さ
