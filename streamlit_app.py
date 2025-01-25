@@ -1,13 +1,6 @@
-import os
+
 import streamlit as st
 import streamlit.components.v1 as stc
-
-# 画像保存先のディレクトリを設定
-IMG_PATH = '/content/images'
-
-# 画像保存先のディレクトリが存在しない場合は作成
-if not os.path.exists(IMG_PATH):
-    os.makedirs(IMG_PATH)
 
 st.title("Embedding Dify app in Streamlit")
 # Case 1の場合
@@ -24,3 +17,39 @@ html_code = """
 # HTMLをStreamlitアプリに埋め込む
 stc.html(html_code, height=800)
 
+# Case 2の場合
+st.write("## Case 2.")
+# HTMLとJavaScriptを埋め込む
+html_code = """
+<img id="myImage" src="aaa.jpg" alt="Target Image" style="display: none;">
+<canvas id="myCanvas"></canvas>
+<script>
+  const img = document.getElementById('myImage');
+  const canvas = document.getElementById('myCanvas');
+  const ctx = canvas.getContext('2d');
+
+  img.onload = () => {
+    canvas.width = img.width * 2;
+    canvas.height = img.height * 2;
+    ctx.scale(2, 2);
+    ctx.drawImage(img, 0, 0);
+
+    // テキストの位置とサイズ (手動で指定)
+    // const x = 255;
+    // const y = 7;
+    // const w = 130;
+    //  const h = 30;
+    const x = 123;
+    const y = 135;
+    const w = 98;
+    const h = 21;
+
+    // 赤い枠を描画する
+    ctx.strokeStyle = 'red';
+    ctx.lineWidth = 2;
+    ctx.strokeRect(x, y, w, h);
+  };
+</script>
+"""
+
+stc.html(html_code, height=700)
