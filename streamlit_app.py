@@ -14,9 +14,9 @@ x = 10
 </head>
 <body>
 <script>
-import streamlit as st
-x = 10
-'x: ', x 
+ import streamlit as st
+ x = 10
+ 'x: ', x 
 </script>
 
 </body>
