@@ -82,13 +82,14 @@ def get_dify_response(query: str) -> str:
 
 if __name__ == "__main__":
     # query = "aaaaa"
-    # テキストボックス
-    query = st.text_input("天気を知りたい場所を入力してください")
 
     try:
+        # テキストボックス
+        query = st.text_input("天気を知りたい場所を入力してください")
+        answer = get_dify_response(query)
+        
         # ボタン
-        if st.button("Dify APIを呼び出す"):
-            answer = get_dify_response(query)
+        #if st.button("Dify APIを呼び出す"):
             #answer = get_dify_response(query)
         
         st.write(answer)
