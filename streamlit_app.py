@@ -19,7 +19,7 @@ canvas_result = st_canvas(
     background_image=None,  # 背景画像（なし）
     # background_image=img,  # 背景画像
     update_streamlit=True,  # Streamlitをリアルタイムで更新
-    height=150,  # キャンバスの高さ
+    height=200,  # キャンバスの高さ
     drawing_mode="rect",  # 描画モード（矩形）
     key="canvas",  # キャンバスのキー
 )
