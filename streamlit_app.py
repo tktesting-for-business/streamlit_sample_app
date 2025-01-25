@@ -5,6 +5,9 @@ from streamlit_drawable_canvas import st_canvas
 #　モジュールの読み込み
 from PIL import Image
 
+import requests
+from typing import Dict
+
 # Streamlit app タイトル
 st.title("Drawable Canvas Demo")
 img = Image.open('aaa.jpg')
@@ -45,7 +48,9 @@ html_code = """
 stc.html(html_code, height=800)
 
 st.image(img)
-st.write("Hello, world")
+
+st.write("## Case 1.5")
+
 
 
 # Case 2の場合
