@@ -65,17 +65,17 @@ def get_dify_response(query: str) -> str:
     :return: APIからの応答テキスト
     """
     headers = {
-        'Authorization': f'Bearer {API_KEY}',
+        'Authorization': 'Bearer app-esamNSyt3DcelD4o6yM9uH4U',
         'Content-Type': 'application/json'
     }
     
-    data: Dict[str, any] = {
+    data: = {
         "inputs": {"text": query},
         "response_mode": "streaming"
         # "user": "taka3chijp@gmail.com"
     }
     
-    response = requests.post(BASE_URL, headers=headers, json=data)
+    response = requests.post(BASE_URL, headers=headers, data=json.dumps(data))
     response.raise_for_status()
     
     # return response.json()['output']
