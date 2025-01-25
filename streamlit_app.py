@@ -65,7 +65,7 @@ def get_dify_response(query: str) -> str:
     :return: APIからの応答テキスト
     """
     headers = {
-        'Authorization': 'Bearer app-esamNSyt3DcelD4o6yM9uH4U',
+        'Authorization': f"Bearer {API_KEY}",
         'Content-Type': 'application/json'
     }
     
