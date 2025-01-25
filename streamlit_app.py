@@ -71,8 +71,8 @@ def get_dify_response(query: str) -> str:
     
     data: Dict[str, any] = {
         "inputs": {"inTest": query},
-        "response_mode": "blocking",
-        "user": "batch_user"
+        "response_mode": "blocking"
+        # "user": "batch_user"
     }
     
     response = requests.post(BASE_URL, headers=headers, json=data)
