@@ -49,8 +49,46 @@ stc.html(html_code, height=800)
 
 st.image(img)
 
+# Test Case
 st.write("## Case 1.5")
+API_KEY = 'app-PAjUWrL1Q78oR37I6lsguUP0'  # 取得したAPIキーに置き換えてください
+# Dify APIのベースURL
+# BASE_URL = 'https://api.dify.ai/v1/chat-messages'
+BASE_URL = 'https://api.dify.ai/v1/getTenki'
 
+def get_dify_response(query: str) -> str:
+    """
+    Dify APIにリクエストを送信し、応答を取得する関数
+
+    :param query: ユーザーの質問
+    :param user: ユーザー識別子
+    :return: APIからの応答テキスト
+    """
+    headers = {
+        'Authorization': f'Bearer {API_KEY}',
+        'Content-Type': 'application/json'
+    }
+    
+    data: Dict[str, any] = {
+        "inputs": {},
+        "query": query,
+        "response_mode": "blocking",
+
+    }
+    
+    response = requests.post(BASE_URL, headers=headers, json=data)
+    response.raise_for_status()
+    
+    return response.json()['answer']
+
+if __name__ == "__main__":
+    query = "大阪"
+    
+    try:
+        answer = get_dify_response(query)
+        print(answer)
+    except requests.RequestException as e:
+        print(f"エラーが発生しました: {e}")
 
 
 # Case 2の場合
