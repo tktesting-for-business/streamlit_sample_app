@@ -69,8 +69,8 @@ def get_dify_response(query: str) -> str:
         'Content-Type': 'application/json'
     }
     
-    data: = {
-        "inputs": {"text": query},
+    data = {
+        "inputs": {"text": 'Hello, how are you?'},
         "response_mode": "streaming"
         # "user": "taka3chijp@gmail.com"
     }
