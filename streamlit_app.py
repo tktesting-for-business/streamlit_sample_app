@@ -79,11 +79,11 @@ def get_dify_response(query: str) -> str:
     response = requests.post(BASE_URL, headers=headers, json=data)
     response.raise_for_status()
     
-    return response.json()['answer']
+    return response.json()['output']
 
 if __name__ == "__main__":
     query = "大阪"
-    st.write(data.inTest)
+    
     try:
         answer = get_dify_response(query)
         st.write(answer)
