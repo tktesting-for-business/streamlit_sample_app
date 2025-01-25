@@ -70,7 +70,7 @@ def get_dify_response(query: str) -> str:
     }
     
     data = {
-        "inputs": {"text": 'Hello, how are you?'},
+        "inputs": {"text": query},
         "response_mode": "streaming"
         # "user": "taka3chijp@gmail.com"
     }
