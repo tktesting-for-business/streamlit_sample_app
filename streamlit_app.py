@@ -45,7 +45,7 @@ html_code = """
 </iframe>
 """
 # HTMLをStreamlitアプリに埋め込む
-stc.html(html_code, height=400)
+stc.html(html_code, height=800)
 
 st.image(img)
 
