@@ -86,13 +86,16 @@ if __name__ == "__main__":
     try:
         # テキストボックス
         query = st.text_input("天気を知りたい場所を入力してください")
-        answer = get_dify_response(query)
-        
+        if query:
+            answer = get_dify_response(query)
+            st.write(answer)
+        else:
+            st.write("地域が入力されていません")
+            
         # ボタン
         #if st.button("Dify APIを呼び出す"):
             #answer = get_dify_response(query)
         
-        st.write(answer)
     except requests.RequestException as e:
         st.write(f"エラーが発生しました: {e}")
 
