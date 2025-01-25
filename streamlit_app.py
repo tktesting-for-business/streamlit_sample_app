@@ -8,6 +8,8 @@ from PIL import Image
 # Streamlit app タイトル
 st.title("Drawable Canvas Demo")
 
+img=Image.open("aaa.jpg")
+
 # キャンバスの設定
 canvas_result = st_canvas(
     fill_color="rgba(255, 165, 0, 0.3)",  # 塗りつぶしの色
@@ -15,8 +17,7 @@ canvas_result = st_canvas(
     stroke_color="#000000",  # 線の色
     background_color="#FFF",  # 背景色
     background_image=None,  # 背景画像（なし）
-    #bg_image = st.sidebar.file_uploader("Background image:", type=["png", "jpg"])
-    background_image=Image.open("aaa.jpg"),  # 背景画像
+    background_image=img,  # 背景画像
     update_streamlit=True,  # Streamlitをリアルタイムで更新
     height=150,  # キャンバスの高さ
     drawing_mode="rect",  # 描画モード（矩形）
