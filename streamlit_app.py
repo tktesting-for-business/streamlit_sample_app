@@ -21,7 +21,7 @@ stc.html(html_code, height=800)
 st.write("## Case 2.")
 # HTMLとJavaScriptを埋め込む
 html_code = """
-<img id="myImage" src="aaa.jpg" alt="Target Image" style="display: none;">
+<img id="myImage" src="./aaa.jpg" alt="Target Image" style="display: none;">
 <canvas id="myCanvas"></canvas>
 <script>
   const img = document.getElementById('myImage');
