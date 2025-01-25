@@ -51,8 +51,7 @@ st.image(img)
 
 # Test Case
 st.write("## Case 1.5")
-# API_KEY = 'app-esamNSyt3DcelD4o6yM9uH4U'  # 取得したAPIキーに置き換えてください
-API_KEY = '7482f928-00ff-408a-9e28-80cabb565ea7'  # 取得したAPIキーに置き換えてください
+API_KEY = 'app-esamNSyt3DcelD4o6yM9uH4U'  # 取得したAPIキーに置き換えてください
 
 # Dify APIのベースURL
 # BASE_URL = 'https://api.dify.ai/v1/chat-messages'
