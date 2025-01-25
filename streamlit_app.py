@@ -45,7 +45,7 @@ html_code = """
 </iframe>
 """
 # HTMLをStreamlitアプリに埋め込む
-stc.html(html_code, height=800)
+stc.html(html_code, height=400)
 
 st.image(img)
 
@@ -59,7 +59,6 @@ BASE_URL = 'https://api.dify.ai/v1/workflows/run'
 def get_dify_response(query: str) -> str:
     """
     Dify APIにリクエストを送信し、応答を取得する関数
-
     :param query: ユーザーの質問
     :return: APIからの応答テキスト
     """
@@ -81,7 +80,6 @@ def get_dify_response(query: str) -> str:
 
 
 if __name__ == "__main__":
-    # query = "aaaaa"
 
     try:
         # テキストボックス
