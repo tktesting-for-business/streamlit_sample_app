@@ -8,8 +8,8 @@ from PIL import Image
 # Streamlit app タイトル
 st.title("Drawable Canvas Demo")
 
-img = Image.open('aaa.png')
-st.image(img, caption='サンプル',use_column_width=True)
+#img = Image.open('aaa.png')
+#st.image(img, caption='サンプル',use_column_width=True)
 
 # キャンバスの設定
 canvas_result = st_canvas(
