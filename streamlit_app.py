@@ -76,8 +76,8 @@ def get_dify_response(query: str) -> str:
     
     response = requests.post(BASE_URL, headers=headers, json=data)
     response.raise_for_status()
-
-return response.json()['data']['outputs']['output']
+    retData = response.json()
+return retData['data']['outputs']['output']
         
 
 if __name__ == "__main__":
