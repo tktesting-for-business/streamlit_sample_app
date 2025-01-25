@@ -72,7 +72,7 @@ def get_dify_response(query: str) -> str:
         "inputs": {},
         "input": query,
         "response_mode": "streaming",
-        "user": "abc-123"
+        "user": "taka3chijp@gmail.com"
     }
     
     response = requests.post(BASE_URL, headers=headers, json=data)
