@@ -80,7 +80,6 @@ def get_dify_response(query: str) -> str:
 
 
 if __name__ == "__main__":
-
     try:
         # テキストボックス
         query = st.text_input("天気を知りたい場所を入力してください")
@@ -89,44 +88,7 @@ if __name__ == "__main__":
             st.write(answer)
         else:
             st.write("地域が入力されていません")
-            
-        # ボタン
-        #if st.button("Dify APIを呼び出す"):
-            #answer = get_dify_response(query)
         
     except requests.RequestException as e:
         st.write(f"エラーが発生しました: {e}")
 
-
-# Case 2の場合
-st.write("## Case 2.")
-# HTMLとJavaScriptを埋め込む
-html_code = """
-<img id="myImage" src="aaa.jpg" alt="Target Image" style="display: none;">
-<canvas id="myCanvas"></canvas>
-<script>
-  const img = document.getElementById('myImage');
-  const canvas = document.getElementById('myCanvas');
-  const ctx = canvas.getContext('2d');
-
-  img.onload = () => {
-    canvas.width = img.width * 2;
-    canvas.height = img.height * 2;
-    ctx.scale(2, 2);
-    ctx.drawImage(img, 0, 0);
-
-    // テキストの位置とサイズ (手動で指定)
-    const x = 123;
-    const y = 135;
-    const w = 98;
-    const h = 21;
-
-    // 赤い枠を描画する
-    ctx.strokeStyle = 'red';
-    ctx.lineWidth = 2;
-    ctx.strokeRect(x, y, w, h);
-  };
-</script>
-"""
-
-stc.html(html_code, height=700)
