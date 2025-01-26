@@ -10,7 +10,6 @@ from typing import Dict
 
 # Streamlit app タイトル
 st.title("Drawable Canvas Demo")
-img = Image.open('aaa.jpg')
 
 
 # キャンバスの設定
@@ -46,8 +45,6 @@ html_code = """
 """
 # HTMLをStreamlitアプリに埋め込む
 stc.html(html_code, height=800)
-
-st.image(img)
 
 # Test Case
 st.write("## Case 天気予報")
