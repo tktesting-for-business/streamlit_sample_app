@@ -34,7 +34,7 @@ if canvas_result.json_data is not None:
 st.title("Embedding Dify app in Streamlit")
 
 #########################################
-url = "https://api.dify.ai/v1/chat-message"
+url = "https://api.dify.ai/v1/chat-messages"
 
 headers = {
     'Authorization': 'Bearer app-9eMjHk5dnkBnGFVZU84mkfIM',
@@ -45,6 +45,12 @@ data = {
     "inputs": {"query": 'こんにちは。今日はいい天気ですね'},
     "response_mode": "streaming",  
     "user": "taka3chijp@gmail.com"
+    "files": [ 
+        { 
+            "type": "image", 
+            "transfer_method": "remote_url", 
+            "url": "aaa.jpg" 
+        } 
 }
 
 response = requests.post(url, headers=headers, json=data)
