@@ -45,8 +45,7 @@ data = {
     "inputs": {"query": 'こんにちは。今日はいい天気ですね'},
     "response_mode": "streaming",  
     "user": "taka3chijp@gmail.com"
-    "files": [ 
-        { 
+    "files": { 
             "type": "image", 
             "transfer_method": "remote_url", 
             "url": "aaa.jpg" 
