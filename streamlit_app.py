@@ -33,7 +33,7 @@ if canvas_result.json_data is not None:
 
 st.title("Embedding Dify app in Streamlit")
 # Case 1の場合
-st.write("## Case 1.")
+st.write("## Case 1.文字列抽出チャットフロー")
 # iFrameのHTMLコード
 html_code = """
 <iframe
