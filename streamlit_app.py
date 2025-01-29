@@ -41,7 +41,7 @@ headers = {
 }
 
 data = {
-    "inputs": {"query": '100'},
+    "inputs": {"input": '100'},
     "response_mode": "streaming",
     "conversation_id": "",  
     "user": "taka3chijp@gmail.com",
