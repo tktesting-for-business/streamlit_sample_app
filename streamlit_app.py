@@ -41,9 +41,9 @@ headers = {
 }
 
 data = {
-    "inputs": {"query": '"run"'},
+    "inputs": {"query": "run"},
     "response_mode": "streaming",
-    "conversation_id": "",  
+    "conversation_id": "6a97efdb-b3f4-4a18-9bd7-7c1f1d62553f",  
     "user": "taka3chijp@gmail.com",
     "files": { "type": "image", "transfer_method": "remote_url", "url": "aaa.jpg" }  
 }
