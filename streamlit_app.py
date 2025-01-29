@@ -11,25 +11,6 @@ from typing import Dict
 # Streamlit app タイトル
 st.title("Drawable Canvas Demo")
 
-#########################################
-url = "https://api.dify.ai/v1/chat-messages"
-
-headers = {
-    'Authorization': 'Bearer app-9eMjHk5dnkBnGFVZU84mkfIM',
-    'Content-Type': 'application/json',
-}
-
-data = {
-    "inputs": {"width": '100',"height": '100'},
-    "response_mode": "streaming",  
-    "user": "taka3chijp@gmail.com",
-    "files": { "type": "image", "transfer_method": "remote_url", "url": "aaa.jpg" }  
-}
-
-response = requests.post(url, headers=headers, json=data)
-st.write(response.text)
-#############################
-
 # キャンバスの設定
 canvas_result = st_canvas(
     fill_color="rgba(255, 165, 0, 0.3)",  # 塗りつぶしの色
@@ -51,7 +32,24 @@ if canvas_result.json_data is not None:
 
 st.title("Embedding Dify app in Streamlit")
 
+#########################################
+url = "https://api.dify.ai/v1/chat-messages"
 
+headers = {
+    'Authorization': 'Bearer app-9eMjHk5dnkBnGFVZU84mkfIM',
+    'Content-Type': 'application/json',
+}
+
+data = {
+    "inputs": {"query": 'run'},
+    "response_mode": "streaming",  
+    "user": "taka3chijp@gmail.com",
+    "files": { "type": "image", "transfer_method": "remote_url", "url": "aaa.jpg" }  
+}
+
+response = requests.post(url, headers=headers, json=data)
+st.write(response.text)
+#############################
 
 # Case 1の場合
 st.write("## Case 1.文字列抽出チャットフロー")
