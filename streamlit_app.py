@@ -22,7 +22,7 @@ headers = {
 data = {
     "inputs": {"width": '100',"height": '100'},
     "response_mode": "streaming",  
-    "user": "taka3chijp@gmail.com"
+    "user": "taka3chijp@gmail.com",
     "files": { "type": "image", "transfer_method": "remote_url", "url": "aaa.jpg" }  
 }
 
