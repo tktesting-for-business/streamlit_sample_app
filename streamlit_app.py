@@ -68,7 +68,7 @@ stc.html(html_code, height=800)
 
 # Test Case
 st.write("## Case 天気予報")
-API_KEY = 'app-esamNSyt3DcelD4o6yM9uH4U'  # 取得したAPIキーに置き換えてください
+API_KEY = 'app-mMq6UUkhNnINPfI4vbcVWOB1'  # 取得したAPIキーに置き換えてください
 
 # Dify APIのベースURL
 BASE_URL = 'https://api.dify.ai/v1/workflows/run'
