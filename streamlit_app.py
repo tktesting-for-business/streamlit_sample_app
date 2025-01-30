@@ -57,7 +57,7 @@ st.write("## Case 1.文字列抽出チャットフロー")
 # iFrameのHTMLコード
 html_code = """
 <iframe
- src="https://udify.app/chatbot/H91lTD4M0KqfMpYk"
+ src="https://udify.app/chat/gzFONyEnWLevSiAH"
  style="width: 100%; height: 100%; min-height: 700px"
  frameborder="0"
  allow="microphone">
